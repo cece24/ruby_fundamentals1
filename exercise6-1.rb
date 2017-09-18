@@ -11,6 +11,8 @@ while done_exercise == false
     total_distance += 5
   elsif user_exercise_type == "go home"
     done_exercise = true
+  else
+    puts "You have entered a command that does not exist"
   end
 
   puts "Distance from home is #{total_distance}km."
