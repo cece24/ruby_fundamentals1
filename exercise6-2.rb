@@ -5,12 +5,8 @@ energy_valid = false
 puts "How much energy do you have, on a scale of 1 to 30?"
 energy = gets.to_i
 
-while energy_valid == false
-  if energy < 1
-    puts "Invalid entry, please enter in a number between 1 and 30"
-    puts "How much energy do you have, on a scale of 1 to 30?"
-    energy = gets.to_i
-  elsif energy > 30
+until energy_valid
+  if energy < 1 || energy > 30
     puts "Invalid entry, please enter in a number between 1 and 30"
     puts "How much energy do you have, on a scale of 1 to 30?"
     energy = gets.to_i
@@ -19,7 +15,7 @@ while energy_valid == false
   end
 end
 
-while done_exercise == false
+until done_exercise
   if energy <= 0
     done_exercise = true
     puts "You have run out of energy! Time to go home"
